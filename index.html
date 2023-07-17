@@ -933,7 +933,7 @@
         - #BLOG
       -->
 
-      <article class="blog active" data-page="blog">
+      <article class="blog" data-page="blog">
 
         <header>
           <h2 class="h2 article-title">Blog</h2>
@@ -1112,6 +1112,50 @@
             </li>
 
           </ul>
+
+        </section>
+
+      </article>
+
+       <!--
+        - #CONTACT
+      -->
+
+      <article class="contact active" data-page="contact">
+
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+
+        <section class="mapbox" data-mapbox>
+          <figure>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d52522.856118927135!2d50.8728867!3d34.6375638!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfa!2s!4v1689579279225!5m2!1sfa!2s"
+              width="400" height="300" loading="lazy"></iframe>
+          </figure>
+          
+        </section>
+
+        <section class="contact-form">
+
+          <h3 class="h3 form-title">Contact Form</h3>
+
+          <form action="#" class="form" data-form>
+
+            <div class="input-wrapper">
+              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+
+              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+            </div>
+
+            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+
+            <button class="form-btn" type="submit" disabled data-form-btn>
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Send Message</span>
+            </button>
+
+          </form>
 
         </section>
 
