@@ -120,6 +120,10 @@
 \*-----------------------------------*/
 
 *, *::before, *::after {
+  
+  /* mobile highlight color tap */
+  -webkit-tap-highlight-color: transparent;
+  
   margin: 0;
   padding: 0;
   box-sizing: border-box;
