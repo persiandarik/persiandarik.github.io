@@ -128,7 +128,9 @@ for (let i = 0; i < formInputs.length; i++) {
     // check form validation
     if (form.checkValidity()) {
       formBtn.removeAttribute("disabled");
+      formBtn.style.color = "#ffdb70";
     } else {
+      formBtn.style.color = "#fafafa";
       formBtn.setAttribute("disabled", "");
     }
 
@@ -140,6 +142,7 @@ formBtn.addEventListener("click", function (e) {
   e.preventDefault();
  // disabled form Btn
   formBtn.setAttribute("disabled", "");
+  formBtn.style.color = "#fafafa";
 
   fetch("https://formsubmit.co/ajax/ebadijob@gmail.com", {
     method: "POST",

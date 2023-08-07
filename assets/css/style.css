@@ -1195,7 +1195,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   position: relative;
   width: 100%;
   background: var(--border-gradient-onyx);
-  color: var(--orange-yellow-crayola);
+  color: var(--white-2);
   display: flex;
   justify-content: center;
   align-items: center;
