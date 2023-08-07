@@ -119,6 +119,7 @@ for (let i = 0; i < filterBtn.length; i++) {
 const form = document.querySelector("[data-form]");
 const formInputs = document.querySelectorAll("[data-form-input]");
 const formBtn = document.querySelector("[data-form-btn]");
+const formTitle = document.querySelector(".form-title");
 
 // add event to all form input field
 for (let i = 0; i < formInputs.length; i++) {
@@ -133,6 +134,45 @@ for (let i = 0; i < formInputs.length; i++) {
 
   });
 }
+
+// send form to email
+formBtn.addEventListener("click", function (e) {
+  e.preventDefault();
+ // disabled form Btn
+  formBtn.setAttribute("disabled", "");
+
+  fetch("https://formsubmit.co/ajax/ebadijob@gmail.com", {
+    method: "POST",
+    headers: { 
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+    },
+    body: JSON.stringify({
+        name: formInputs[0].value,
+        email:formInputs[1].value,
+        message: formInputs[2].value,
+        _template: "table",
+    })
+})
+    .then(response => response.json())
+    .then(displayResults)
+    .catch(error => console.log(error));
+  });
+
+  function displayResults(data){
+     // clear form inputs
+    for (let i = 0; i < formInputs.length; i++) {
+      formInputs[i].value= "";
+    }
+    if (data.success === "true") {
+      console.log(data);
+      formTitle.innerHTML = "✅ form was submitted";
+      setTimeout(() => {
+        formTitle.innerHTML = "Contact Form";
+      }, 5000);
+    } 
+
+  }
 
 
 
